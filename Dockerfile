@@ -11,4 +11,6 @@ COPY Rakefile $APP_DIR
 RUN gem install bundler && \
     bundle install
 
+VOLUME /pacts
+
 CMD ["rake", "pact:publish"]
